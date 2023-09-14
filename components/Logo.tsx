@@ -8,7 +8,7 @@ function Logo(props: any) {
         className="rounded-full object-cover"
         height={50}
         width={50}
-        src="https://links.papareact.com/1m8"
+        src="https://png.pngtree.com/png-vector/20220709/ourmid/pngtree-businessman-user-avatar-wearing-suit-with-red-tie-png-image_5809521.png"
         alt="logo"
       />
     </div>
