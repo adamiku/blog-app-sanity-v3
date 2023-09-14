@@ -1,4 +1,5 @@
 import { SanityDocument } from "next-sanity";
+import type { Image as SanityImage } from "sanity";
 
 // type Base = {
 //   _createdAt: string;
@@ -25,7 +26,7 @@ interface Author extends SanityDocument {
   slug: string;
 }
 
-interface Image {
+interface Image extends SanityImage {
   _type: "image";
   asset: Reference;
 }
