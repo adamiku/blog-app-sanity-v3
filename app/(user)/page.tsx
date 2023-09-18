@@ -14,6 +14,8 @@ const query = groq`
 } | order(_createdAt desc)
 `;
 
+export const revalidate = 30;
+
 export default async function Home() {
   const posts = await sanityFetch<Post[]>({ query });
   const isDraftMode = draftMode().isEnabled;

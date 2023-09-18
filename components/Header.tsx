@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 function Header() {
@@ -6,13 +5,14 @@ function Header() {
     <header className="flex items-center justify-between space-x-2 font-bold px-10 py-5">
       <div className="flex items-center space-x-2">
         <Link href="/">
-          <Image
+          {/* <Image
             className="rounded-full"
             src="https://cdn.iconscout.com/icon/free/png-256/free-avatar-371-456323.png"
             width={50}
             height={50}
             alt="Logo"
-          />
+          /> */}
+          yo
         </Link>
         <h1>New brand</h1>
       </div>
