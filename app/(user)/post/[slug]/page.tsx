@@ -5,6 +5,7 @@ import { urlForImage } from "@/sanity/lib/image";
 import { Post } from "@/typings";
 import { PortableText } from "@portabletext/react";
 import { groq } from "next-sanity";
+import { draftMode } from "next/headers";
 import Image from "next/image";
 
 type Props = {
@@ -38,8 +39,12 @@ async function Post({ params: { slug } }: Props) {
         categories[]->
     }
     `;
-
-  const post: Post = await sanityFetch<Post>({ query, params: { slug } });
+  const isDraftMode = draftMode().isEnabled;
+  const post: Post = await sanityFetch<Post>({
+    query,
+    params: { slug },
+    isDraftMode,
+  });
 
   return (
     <article className="px-10 pb-28 text-white">
